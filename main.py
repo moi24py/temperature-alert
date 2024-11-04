@@ -1,6 +1,6 @@
-import user_funcs as u_fun
-import app_funcs as a_fun
-import email_funcs as e_fun
+import packages.user_funcs as u_fun
+import packages.app_funcs as a_fun
+import packages.email_funcs as e_fun
 
 city,country,temperature,unit,criteria = u_fun.user_inputs()
 
