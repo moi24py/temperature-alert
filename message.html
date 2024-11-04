@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Temperatures</title>
+</head>
+
+<body>
+  <h1>{{ city }} temperatures</h1>
+  {% if temps and hours %}
+    <ul>
+    {% for i in range(qty) %}
+    <li style="list-style-type: none;">
+      {{ temps[i] }}°{{unit.capitalize()}} at {{hours[i].split('T')[1]}}
+    </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p> Today's temperatures are not {{criteria}} {{user_t}}°{{unit}}</p>
+  {%endif%}
+</body>
+</html>
