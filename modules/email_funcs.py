@@ -60,5 +60,5 @@ def send_email(city:str, temps:list, hours: list, user_t:float, unit:str, criter
         smtp.send_message(msg)
 
 if __name__ == "__main__":
-    make_body()
-    send_email()
+    make_body([9.8,10.4,15.8,19.7,23.4], ["10:00","11:00","12:00","13:00","14:00", 15.0,'c','above'])
+    send_email("Dublin",[9.8,10.4,15.8,19.7,23.4], ["10:00","11:00","12:00","13:00","14:00", 15.0,'c','above'])
