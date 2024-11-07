@@ -31,8 +31,10 @@ def send_email(city:str, temps:list, hours: list, user_t:float, unit:str, criter
     # e.g. myemail@gmail.com
     sender = ""
 
-    # e.g. 'contact1@yahoo.com'
-    recipient = ""
+    # e.g. ["contact1@yahoo.com", "contact2@gmail.com"]
+    contacts = []
+
+    recipients = ', '.join(contacts)
 
     # 'Name Surname'
     msg['From'] = ""
@@ -41,6 +43,7 @@ def send_email(city:str, temps:list, hours: list, user_t:float, unit:str, criter
     password = ""
 
     msg = EmailMessage()
+    msg['To'] = recipients
     msg['Subject'] = f"{city.capitalize()} today's temperatures"
     
     # plain text message, if recipient/s disallowed HTML emails
@@ -54,7 +57,7 @@ def send_email(city:str, temps:list, hours: list, user_t:float, unit:str, criter
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
         smtp.login(sender,password)
-        smtp.sendmail(sender, recipients, msg.as_string())
+        smtp.send_message(msg)
 
 if __name__ == "__main__":
     make_body()
