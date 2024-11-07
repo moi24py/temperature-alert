@@ -98,11 +98,11 @@ def choose_city(matched_cities : list) -> dict:
         try:
             index_num = int(index_str)
         except:
-            print(f"Please, only insert numbers from 0 to {choices_qty-1}.")
-        if index_num <= choices_qty:
+            print(f"Please, only insert numbers.")
+        try:
             return matched_cities[index_num]
-        else:
-            print(f"Please, only insert numbers from 0 to {choices_qty-1}.")
+        except:
+            print(f"Only numbers from 0 to {choices_qty-1} are accepted.")
 
 def print_or_send():
     """Persistently ask the user if they want the results to be printed or sent as an email."""
