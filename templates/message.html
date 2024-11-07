@@ -1,22 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Temperatures</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temperature alert</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400..700&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-<body>
-  <h1>{{ city }} temperatures</h1>
-  {% if temps and hours %}
-    <ul>
-    {% for i in range(qty) %}
-    <li style="list-style-type: none;">
-      {{ temps[i] }}°{{unit.capitalize()}} at {{hours[i].split('T')[1]}}
-    </li>
-    {% endfor %}
-    </ul>
-  {% else %}
-    <p> Today's temperatures are not {{criteria}} {{user_t}}°{{unit}}</p>
-  {%endif%}
-</body>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: black;
+        background-color: #f0f0f0;
+        font-size: 19px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3%;
+      }
+
+      #banner-top {
+        background-color: #ffffff;
+        color: white;
+        background: rgb(255,82,107);
+        background: linear-gradient(90deg, rgb(255,82,107), rgb(58,86,180));
+        height: 50px;
+        max-width: 100%;
+        max-height: 80px;
+      }
+
+      #logo p {
+        font-family: "Sometype Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        margin: 0;
+        padding-left: 3%;
+        padding-top: 7px;
+      }
+
+      .one-col {
+        font-family: sans-serif;
+        display: block;
+      }
+
+      h1 {
+        font-size:larger;
+        color: rgb(58,86,180);
+      }
+
+      p {
+        font-size: medium;
+      }
+
+      h1, p, ul{
+        margin: 3%;
+      }
+
+      li {
+        font-family: monospace;
+        list-style-type: none;
+        font-weight: 400;
+        font-style: normal;
+        font-size: medium;
+      }
+
+      hr {
+        height: 2px;
+        background-color: #864e87;
+        clear: both;
+        width: 80%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #banner-bottom {
+        background-color: #ffffff;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgb(58,86,180), rgb(255,64,64));
+        max-width: 100%;
+        height: 30px;
+        color: white;
+      }
+
+      #git {
+        text-align: center;
+        line-height: 25px;
+        color: white;
+      }
+
+      #git a{
+        color: white;
+        text-decoration: none;
+        font-size:x-small;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner-top">
+      <header>
+        <div id="logo">
+          <p>temperature <br>alert</p>
+      </header>
+    </div>
+    <div class="one-col">
+      <h1>Hello there!</h1>
+      <p>
+        Here are today's temperatures {{criteria}} {{user_t}}°{{unit}}:
+      </p>
+      {% if temps and hours %}
+      <p>
+        <ul>
+        {% for i in range(qty) %}
+          <li>
+            {{ temps[i] }}°{{unit.capitalize()}} at {{hours[i].split('T')[1]}}
+          </li>
+        {% endfor %}
+        </ul>
+      </p>
+      {% else %}
+        <p> Today's temperatures are not {{criteria}} {{user_t}}°{{unit}}</p>
+      {%endif%}
+      </p>
+    </div>
+    <footer>
+      <hr />
+        <div id="banner-bottom">
+            <div id="git">
+                <a href="https://github.com/moi24py/" target="_blank">Github: @moi24py</a>
+            </div>
+        </div>
+    </footer>
+  </body>
 </html>
