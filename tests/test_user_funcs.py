@@ -75,11 +75,13 @@ def test_choose_city_invalid_input():
             u_fun.choose_city(cities)
 
 def test_print_or_send_valid_input():
+    """Test function with valid inputs"""
     with patch('builtins.input', return_value='s'):
         res = u_fun.print_or_send()
         assert res == 's'
 
 def test_print_or_send_invalid_input():
+    """Test function with invalid inputs"""
     with patch('builtins.input', return_value=2):
         with pytest.raises(TypeError):
             u_fun.print_or_send()
