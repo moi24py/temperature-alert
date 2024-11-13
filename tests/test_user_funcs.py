@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 
-import packages.user_funcs as u_fun
+import modules.user_funcs as u_fun
 
 def test_get_loc_with_valid_input():
     """Test the get input function with a valid input"""
