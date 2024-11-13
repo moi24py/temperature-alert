@@ -115,12 +115,12 @@
       <p>
         Here are today's temperatures {{criteria}} {{user_t}}°{{unit}}:
       </p>
-      {% if temps and hours %}
+      {% if temps%}
       <p>
         <ul>
         {% for i in range(qty) %}
-          <li>
-            {{ temps[i] }}°{{unit.capitalize()}} at {{hours[i].split('T')[1]}}
+            <li>
+                {{ temps[i] }}
           </li>
         {% endfor %}
         </ul>
