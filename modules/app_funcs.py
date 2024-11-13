@@ -56,7 +56,7 @@ def search_city(city:str, country:str) -> list[dict] :
 
 def get_coords(selected_city:dict) -> tuple:
     """
-    Gets the coordinates of the selected city
+    Gets the coordinates of the selected city.
     
     Parameters
     ----------
