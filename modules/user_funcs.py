@@ -11,7 +11,19 @@ temp_regex = re.compile(r'^[-+]?[0-9]{1,3}(\.[0-9])?$')
 criteria_regex = re.compile(r'^[a,b,e,l,o,v,w]{5}$', re.I)
 
 def get_loc(location : str) -> str:
-    """Persistently ask the user for a name (city or country)."""
+    """
+    Persistently asks the user for a name (city or country).
+    
+    Parameters
+    ----------
+    location : str
+        A string ('city'/'country') to ask the user the appropriate data
+    
+    Returns
+    -------
+    string
+        A string with the name of the city
+    """
     i = 0
     while i < 4:
         user_loc = input(f"Please, enter a {location} (at least 3 letters): ")
@@ -28,7 +40,14 @@ def get_loc(location : str) -> str:
 
 
 def get_temp() -> float:
-    """Persistently ask the user for a temperature."""
+    """
+    Persistently asks the user to enter a temperature.
+    
+    Returns
+    -------
+    float
+        A float represeting the temperature entered by the user
+    """
     i = 0
     while i < 4:
         user_temp = input(f"Please, enter a temperature: ")
@@ -45,8 +64,19 @@ def get_temp() -> float:
 
 def get_criteria(temp : float, unit : str) -> str:
     """
-    Persistently ask the user what temperatures they are interested in:
-    below or above the given temperature.
+    Persistently asks the user what temperatures they are interested in,
+    if below or above the temperature they entered.
+
+    Parameters
+    ----------
+    temp : float
+        A float represeting the temperature entered by the user
+    unit : str
+        The string that represents the temperature unit entered by the user
+
+    Returns:
+    string
+        A string representing the criteria choosen by the user ('below'/'above')
     """
     i = 0
     while i < 4:
@@ -62,9 +92,17 @@ def get_criteria(temp : float, unit : str) -> str:
             print("Please, try again. The only accepted values are: \"above\" and \"below\".")
     raise TypeError("Invalid input, one or more invalid characters were used. End of program.")
 
-# Celsius or Fahrenheit
+
 def temp_unit() -> tuple:
-    """Persistenly ask the user for a temperature unit: Celsius or Fahrenheit."""
+    """
+    Persistenly asks the user for a temperature unit: Celsius or Fahrenheit.
+    
+    Returns
+    -------
+    tuple
+        A tuple with the string representing the temperature unit and
+        a string containing the URL param for the API's link
+    """
     i = 0
     while i < 4:
         user_unit = input("Enter \"c\" for Celsius, \"f\" for Fahrenheit: ")
@@ -81,21 +119,33 @@ def temp_unit() -> tuple:
 
 def user_inputs() -> tuple:
     """
-    Ask the user for city, country, temperature, Celsius/Fahrenheit.
-    The function returns a tuple.
+    Asks the user for the temperature, the temperature unit (Celsius/Fahrenheit),
+    and the criteria ('below'/'above').
+
+    Returns
+    -------
+    tuple
+        A tuple with the temperature, the unit and the criteria.
     """
-    city = get_loc('city')
-    country = get_loc('country')
     temperature = get_temp()
     unit_C_F = temp_unit()
     criteria = get_criteria(temperature, unit_C_F[0])
-    user_data = (city,country,temperature, unit_C_F, criteria)
+    user_data = (temperature, unit_C_F, criteria)
     return user_data
 
-def choose_city(matched_cities : list) -> dict:
+def choose_city(matched_cities : list[dict]) -> dict:
     """
-    If there is more than one city with that name, ask the user which one they prefer.
-    The function returns a dictionary of the selected city.
+    Asks the user which city they are interested in.
+
+    Parameters
+    ----------
+    matched_cities : list[dict]
+        A list of diciontaries representing the cities in the database
+
+    Returns
+    -------
+    dict
+        A dictionary of the selected city
     """
     choices_qty = len(matched_cities)
     item_num = 0
@@ -121,8 +171,15 @@ def choose_city(matched_cities : list) -> dict:
             print(f"Only numbers from 0 to {choices_qty-1} are accepted.")
     raise TypeError("Invalid input. Maximum attempts reached. End of program.")
 
-def print_or_send():
-    """Persistently ask the user if they want the results to be printed or sent as an email."""
+def print_or_send() -> str:
+    """
+    Persistently asks the user if they want the results to be printed or sent as an email.
+
+    Returns
+    -------
+    str
+        A string that corrisponds to 'p' (print) or 's' (send)
+    """
     i = 0
     while i < 4:
         pref = input("Do you prefer the results to be printed in the console or sent as an email? (p/s): ")
@@ -134,6 +191,7 @@ def print_or_send():
             i += 1
             print("Please enter: \"p\" for printing or \"s\" for sending.")
     raise TypeError("Invalid input. Maximum attempts reached. End of program.")
+
 
 if __name__ == "__main__":
     get_loc('city or country')
