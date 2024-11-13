@@ -20,7 +20,7 @@ def test_get_temp_with_valid_input():
         u_fun.get_temp() == '18.0'
 
 def test_get_temp_with_invalid_input():
-    """Test the get input function with a valid input"""
+    """Test function with an invalid input to raise an error"""
     with patch('builtins.input', return_value='abc'):
         with pytest.raises(TypeError):
             u_fun.get_temp()
@@ -31,7 +31,7 @@ def test_get_criteria_valid_input():
         u_fun.get_criteria(18.0,'c')
 
 def test_get_criteria_invalid_input():
-    """Test the function with a valid input"""
+    """Test the function with a valid input to raise an error"""
     with patch('builtins.input', return_value='abo'):
         with pytest.raises(TypeError):
             u_fun.get_criteria(18.0,'c')
@@ -43,7 +43,7 @@ def test_temp_unit_valid_input():
         assert unit == ('c','')
 
 def test_temp_unit_invalid_input():
-    """Test the function with an invalid input"""
+    """Test the function with an invalid input to raise an error"""
     with patch('builtins.input', return_value='s'):
         with pytest.raises(ValueError):
             u_fun.temp_unit()
@@ -64,7 +64,7 @@ def test_choose_city_valid_input():
         assert city == cities[1]
 
 def test_choose_city_invalid_input():
-    """Test function with valid inputs"""
+    """Test function with invalid inputs to raise an error"""
     cities = [
         {'city': 'Masan', 'city_ascii': 'Masan', 'lat': '35.1833', 'lng': '128.5500', 'country': 'Korea, South', 'iso2': 'KR', 'iso3': 'KOR', 'admin_name': 'Gyeongnam', 'capital': '', 'population': '179266', 'id': '1410394650'},
         {'city': 'Manpo', 'city_ascii': 'Manpo', 'lat': '41.1570', 'lng': '126.2900', 'country': 'Korea, North', 'iso2': 'KP', 'iso3': 'PRK', 'admin_name': 'Chagang', 'capital': '', 'population': '116760', 'id': '1408334845'}
