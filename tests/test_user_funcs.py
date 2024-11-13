@@ -9,9 +9,8 @@ def test_get_loc_with_valid_input():
         u_fun.get_loc('city') == 'Berlin'
 
 def test_get_loc_type_error():
-    # Mock dell'input per restituire un valore non valido
+    """Test the function with invalid input to raise an error"""
     with patch('builtins.input', return_value='$invalid$'):
-        # Usa pytest.raises per verificare che venga sollevato TypeError
         with pytest.raises(TypeError):
             u_fun.get_loc('city')
 
