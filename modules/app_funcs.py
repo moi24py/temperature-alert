@@ -1,6 +1,8 @@
 import csv
 import requests
 
+path = 'modules/worldcities.csv'
+
 def get_db_cities(path : str) -> list[dict]:
     """
     Opens and reads the csv file that contains the world cities database.
