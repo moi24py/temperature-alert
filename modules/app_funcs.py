@@ -1,25 +1,35 @@
 import csv
 import requests
 
-def get_db_cities() -> list[dict]:
+def get_db_cities(path : str) -> list[dict]:
     """
     Opens and reads the csv file that contains the world cities database.
+
+    Parameters
+    ----------
+    str
+        A string with the path of the 'worldcities.csv' file
     
     Returns
     -------
     list
         a list of dictionaries representing the cities.
     """
+    if not os.path.isfile(path):
+        print("There is no 'worldcities.csv' file in this directory")
+        raise FileNotFoundError(f"File '{path}' not found.")
+    
     worldcities = []
     try:
-        with open('/modules/worldcities.csv') as csvfile:
+        with open(path) as csvfile:
             reader = csv.DictReader(csvfile)
             for line in reader:
                 worldcities.append(line)
         return worldcities
-    except:
-        print("Cannot open and read the csv file")
+    except Exception as e:
+        print(f"Cannot open and read the csv file: {e}")
         return None
+        
 
 def search_city(city:str, country:str) -> list[dict] :
     """
