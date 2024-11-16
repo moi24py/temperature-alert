@@ -36,6 +36,10 @@ To make this app I used Python with a dash of HTML and CSS.
 ## Usage
 (currently working on this section, sorry!)
 
+![email_example](https://github.com/user-attachments/assets/d2d1f805-3eb4-4172-a3ab-c81dd6a043aa)
+
+
+
 ## Bugs
 Found a bug? Please, let me know at moi24py@gmail.com
 
