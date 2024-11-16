@@ -34,3 +34,30 @@ To make this app I used Python with a dash of HTML and CSS.
  ```
 
 ### WORK IN PROGRESS ###
+
+## Bugs
+Found a bug? Please, let me know at moi24py@gmail.com
+
+
+## Lessons Learned
+I learned a lot thanks to this project!
+In general:
+- Before writing code: have a precise idea of what the project will be, its purpose, and its usage.
+- When writing code: organize the code into small units and always choose "simple and clear" over "concise and cryptic". Refactor the code when possible. Test the code and write docstrings while developing.
+- After writing the code: write the docs.
+
+Specifically, I learned the basics of how to:
+- Send emails
+- Use jinja2, pytest and unittest
+- Test the code
+- Write the docs
+
+## Resources
+Thanks to these resources I was able to learn new skills and make this app work.
+
+* Official docs of Python and the modules I used.
+* [realpython.com](https://realpython.com/)
+* [pytest-with-eric.com](https://pytest-with-eric.com/)
+* [mailtrap.io/blog](https://mailtrap.io/blog/)
+* [freecodecamp.com](https://www.freecodecamp.org/)
+* [medium.com](https://medium.com/)
