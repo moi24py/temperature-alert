@@ -226,6 +226,7 @@ password = "abcdefghijklmnop"
 Case 2)
 
 If the temperatures are not below or above the temperature you entered, a message will be printed in the console to let you know.
+
 Example:
 ```
 temp-alert % Python3 main.py
