@@ -1,7 +1,7 @@
 # temperature-alert
 
 This is my first program! :)
-It's a personal project. It that checks if today's hourly temperatures are above or below a given temperature. You can run it in the console. If you prefer, an email with the retrieved data can be sent to the specified recipients; in this case, you need a Google account.
+It's a personal project. It checks if today's hourly temperatures are above or below a given temperature. You can run it in the console. If you prefer, an email with the retrieved data can be sent to the specified recipients; in this case, you need a Google account.
 
 ## Table of Contents
 - [Why & How](#why--how)
