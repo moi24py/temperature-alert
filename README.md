@@ -76,6 +76,7 @@ You can also type these countries with their complete names, but please make sur
 
 The program will search in the database to find the requested city. If the database cannot be found, it will raise an error. If the database is found, the search will start.
 If there is one matching city, it will print the name of the city and its country.
+
 example a)
 ```
 Novosibirsk in Russia
