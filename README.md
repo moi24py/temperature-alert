@@ -35,8 +35,8 @@ To make this app I used Python with a dash of HTML and CSS.
 
 ## Usage
 (currently working on this section, sorry!)
+![email_ex](https://github.com/user-attachments/assets/78c80734-eaa9-4e30-9a4e-068a9bc8930b)
 
-![email_example](https://github.com/user-attachments/assets/d2d1f805-3eb4-4172-a3ab-c81dd6a043aa)
 
 
 
