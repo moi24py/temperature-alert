@@ -165,6 +165,7 @@ def choose_city(matched_cities : list[dict]) -> dict:
             i += 1
             print(f"Please, only insert numbers.")
         try:
+            print(f"{matched_cities[index_num]['city']} in {matched_cities[index_num]['country']}")
             return matched_cities[index_num]
         except:
             i += 1
