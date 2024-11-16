@@ -39,6 +39,7 @@ else:
     latitude, longitude = a_fun.get_coords(matched_cities[0])
 
 temperature,unit,criteria = u_fun.user_inputs()
+criteria = criteria.lower()
 
 # Make the API request to get the city's weather
 weather_data = a_fun.make_API_request(latitude,longitude,unit[1])
