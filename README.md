@@ -46,6 +46,7 @@ temp-alert % Python3 main.py
 A few questions will be prompted and, depending on your answers, you'll get a different output.
 
 First, you will be asked to type the city you are interested in and its country. The spelling is case insesitive and it's not important to type complete names.
+
 example a)
 ```
 Please, enter a city (at least 3 letters): Novosibirsk
