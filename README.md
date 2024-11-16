@@ -146,7 +146,7 @@ Are you interested in knowing temperatures below or above 12.3? (below/above): "
 Please, try again. The only accepted values are: "above" and "below".
 ```
 
-An API request is made to get the city weather, if it is not successful it raises an error and exits the program
+An API request is made to get the city weather, if it is not successful it raises an error and exits the program.
 ```
 Sorry, cannot retrieve weather data. Exiting now.
 ```
@@ -154,6 +154,7 @@ Sorry, cannot retrieve weather data. Exiting now.
 If the call is successful, temperatures and times are extracted.
 
 Case 1)
+
 If there are temperatures below/above the requested temperature, the program will ask if you want them to be printed or sent as an email.
 1.1) Example with printed:
 ```
@@ -223,6 +224,7 @@ password = "abcdefghijklmnop"
 ```
 
 Case 2)
+
 If the temperatures are not below or above the temperature you entered, a message will be printed in the console to let you know.
 Example:
 ```
