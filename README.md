@@ -33,7 +33,8 @@ To make this app I used Python with a dash of HTML and CSS.
  pip install requirements.txt
  ```
 
-## Usage (currently working on this section, sorry!)
+## Usage
+(currently working on this section, sorry!)
 
 ## Bugs
 Found a bug? Please, let me know at moi24py@gmail.com
