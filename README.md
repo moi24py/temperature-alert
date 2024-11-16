@@ -128,7 +128,7 @@ If the temperature is in Celsius or Fahrenheint. Only "c" and "f" are allowed.
 Enter "c" for Celsius, "f" for Fahrenheit: c
 ```
 
-And whether the interesting range of temperatures is below or above the given temperature.
+Than, the app will ask whether the interesting range of temperatures is below or above the given temperature.
 Please note that the only words allowed are "above" and "below" (case insensitive) spelled exactly like that. Letters not contained in the aforementioned words, spaces, quotes, commas, numbers, or any other character, are not allowed. The user will be continuously prompted by the function to select the appropriate choice between "below" and "above".
 ```
 Are you interested in knowing temperatures below or above -2.3°C?(below/above): below
