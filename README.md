@@ -37,7 +37,7 @@ To make this app I used Python with a dash of HTML and CSS.
 ## Usage
 
 ### Run
-To make the app run, go to the app directory via Terminal, and enter:
+To run the app, go to the app directory via Terminal, and enter:
 ```
 temp-alert % Python3 main.py
 ```
