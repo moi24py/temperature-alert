@@ -17,7 +17,7 @@ It's a personal project. It checks if today's hourly temperatures are above or b
 
 Before learning Python, I had to check the weather manually every day. After learning Python, I automated this process by making a simple app that checks daily if and when the temperatures in my city are below 4°C and sends me an email.
 
-A couple of weeks later, I thought that maybe some other people have a similar need. So, I began expanding the idea behind the app to make it customizable. That's how "temperature-alert" was born.
+A couple of weeks later, I thought that maybe other people have a similar need, so I began expanding the idea behind the app to make it customizable. That's how "temperature-alert" was born.
 
 To make this app I used Python with a dash of HTML and CSS.
 
